@@ -1,0 +1,40 @@
+An algorithm simply refers to the finite steps we follow to solve a problem.
+A given problem can have more than a single algorithm which provides the solution to the problem
+However a particular algorithm provides the most efficient solution to the problem.
+The thought process used in designing the steps to follow in order to solve the problem at hand is known as algorithmic
+thinking.
+No solution works on every given problem.
+A good solution or process in the algorithmic thinking is to define the bounds of the given solution
+To measure the best algorithm that suits a solution, i need to focus on the worst case scenario of all the possible
+provided algorithms.
+The worst case scenario of any given algorithm refers to the longest possible time taken by the algorithm to solve a
+problem when provided with the largest possible input
+
+Providing a solution to a problem has nothing to do with the algorithm to be designed but everything to do with problem
+
+In developing an algorithm for a problems, i must :
+- Clearly define my problem statement
+- The algorithm i design must comprise of specific instruction in a clearly defined order
+- Each instruction must be clearly defined with no ambiguity
+- My developed algorithm must yield the required result. This is to verify the validity of the algorithm
+- The algorithm must complete in a finite amount of time
+
+Measurement of an Algorithm
+An algorithm is measured with respect to two major parameters namely correctness and efficiency
+- Correctness
+An algorithm is deemed correct if and only if :
+- For every set of inputs, the algorithm produces the right and required results
+- The algorithm finishes in a finite amount of time
+
+- Efficiency
+An algorithm is deemed efficient if and only if :
+- The algorithm has a good time complexity and space complexity
+ Time complexity refers to the time taken by the algorithm to provide the solution to the given problem.
+ An algorithm which provides a solution to a given problem in a short amount of time is said to have a good time
+ complexity.
+ Space complexity refers to the amount of memory space an algorithm consumes or uses in the frame of solving of a given
+ problem.
+ An algorithm that utilizes a small amount of space in the frame of solving a problem is said to have a good space
+ complexity.
+ - An efficient algorithm is one which completes or provides a solution to a given problem in short amount of time(good
+ time complexity) while utilizing a small amount of memory space(good space complexity)

@@ -1,0 +1,44 @@
+Data Structure refers to the systematic way of storing and accessing data while programming.
+Data Structure does not concern itself with only the manner of the storing of the data but also the relationship that
+exist between the data being stored as well as the operations that can be performed on the stored data.
+All data structures are required to perform four basic operations namely:
+
+- Accessing and reading of values
+- Insertion values at any position within the data structure
+- Deletion of values from the structure
+- Searching of any arbitrary value within the structure
+
+Examples of data structures include:
+- Arrays
+An array is a data structure that stores items in a sequential manner. Each item stored in an array is given an index to
+signify it's stored position in the sequence. Under normal circumstance, all arrays are zero indexed. That is, the
+positioning of the items stored in the data structure being from the value zero. Hence, the first item in an array is
+located at the index 0, and the rest of the items are given a one-incremented value from the previous index.
+An array may be homogenous or heterogeneous. A homogenous array is an array that stores only items of the same kind.
+This type of array is implemented in some programming languages such as java, swift, and others. A heterogeneous
+array is an array that stores items of different kinds. This type of array is implemented in python, javascript, and
+other programming languages.
+An array is said to a contiguous data structure. This simply implies that, an array is stored a block in the memory of
+the computer with each item next to each other. However, in python, the array implemented does not store the items
+themselves but rather pointers of the items in the contiguous manner. This incurs extra cost when accessing the
+items as the program must follow the pointers to gain access to the actual value. This extra cost is handled by the
+python programming language
+- Linked List
+A linked list is a data structure that stores items in a sequential manner in which each item is stored is a separate
+object called a node. A Node stores two crucial information about the item to be stored. The information stored about
+the item include the content of the item and a reference of the object containing the item.
+The first node within the linked list is known as the head of the list while the last node of the list is known as the
+tail of the list. All references of the nodes in the list point to the node ahead of them except of the tail node whose
+reference does not point to any other node.
+Nodes are said to self-referential objects.
+There are basically three types of linked list namely:
+- Singly linked list
+This is a type of linked list in which each node store the reference of the only node ahead of them except for the tail
+node.
+- Doubly linked list
+This is a type of linked list in which each node store the references of the nodes before and ahead of them. In this
+type, the tail stores the reference to the node before it.
+- Circular linked list
+This is a type of linked list in which each node store the references of the node before and after them. In this type,
+the tail stores the reference of the node before it and also store the reference that points to the head node of the
+list.

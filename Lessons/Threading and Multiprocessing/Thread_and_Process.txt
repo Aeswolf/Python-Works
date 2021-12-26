@@ -1,0 +1,47 @@
+Advantages of a Process
++ Processes take advantage of multiple CPUs and cores --> This advantage paves a way for running several processes at a
+go(multiprocessing)
++ Processes utilize separate memory space --> Processes do not space memory and as such prevent competition over memory
+space and permit faster access to necessary data enhancing performance
++ Great for CPU-bound processing --> Processes make it possible for a single program that requires expensive
+computations to be divided into several portions with lesser expense in relation to be achieved enhancing performance
++ New processes are started independently of the other processes --> New processes do not rely on old processes before
+commencing
++ Processes are interruptable or killable --> A process can be killed at any time and at any given instance
++ Every process is associated with a single GIL(Global Interpreter  Lock) --> This permits the avoidance of GIL
+limitation
+
+Disadvantages of a Process
+- A process is heavyweight
+- A process requires more memory
+- A process commencement is way slower than that of a thread
+- The inter-process communication is very complicated
+
+Advantages of a Thread
++ All threads within a process share the same memory --> This is reduces the amount of memory being used making the
+process a memory-efficient one
++ A thread is a lightweight
++ The commencement of a thread is more faster than that of a process
++ A thread is great for performing Input/Output-bound tasks
+
+Disadvantages of a Thread
+- Threading is limited by GIL --> A single thread is allowed at a time and there is the prevention of parallelism in
+multithreading
+- A thread has no effect on CPU-bound tasks
+- A thread is not easily killable or interruptable and hence paves way for possible memory leaks
+- Must be careful with race conditions when dealing with threads
+
+
+GIL(Global Interpreter Lock)
+- This is a lock in python that permits the execution of a single thread at a time
+- Although controversy in the python community, the GIL is required in CPython because the memory management is not
+thread safe
+
+NB - In multithreading, the reference counting variable in CPython used for memory management requires protection from
+race conditions where two or more threads decrease or increase the value simultaneously leading to the possibility of
+a memory being leaked while is it not released or incorrectly release a memory while the object still exist
+
+To prevent the GIL and permit parallelism:
++ Utilize multiprocessing
++ Utilize a different, free-threaded Python implementation such as Jython or IronPython
++ Utilize python as a wrapper for third-party libraries
