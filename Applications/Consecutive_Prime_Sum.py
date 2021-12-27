@@ -20,9 +20,29 @@ def primes(number):
     return prime_number_list
 
 
-def longest_consecutive_sequence():
-   pass
+def longest_consecutive_sequence(array, required_sum):
+    for starter_prime_index in range(len(array)):
+        sum_of_primes = array[starter_prime_index]
+        count = 1
+        for follow_up_primes in range(starter_prime_index + 1, len(array)):
+            sum_of_primes += array[follow_up_primes]
+            count += 1
+            if sum_of_primes == required_sum:
+                return count
+    return -1
 
 
+def main():
+    prime_numbers_list = primes(100000)
+    largest_possible_count = 0
+    responsible_prime_number = 0
+    for prime in prime_numbers_list:
+        print("Current prime :", prime)
+        number_counted = longest_consecutive_sequence(prime_numbers_list, prime)
+        if largest_possible_count < number_counted:
+            largest_possible_count = number_counted
+            responsible_prime_number = prime
+    print(f"Longest sequence counted is {largest_possible_count} and the prime is {responsible_prime_number}")
 
-print(longest_consecutive_sequence())
+
+main()
