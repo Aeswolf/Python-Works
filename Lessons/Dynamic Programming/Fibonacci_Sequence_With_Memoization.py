@@ -22,7 +22,9 @@ def fibonacci_sequence(term, memo=None):
 
     # if the term is not present in the memo and is either the first or second term, return one
     if term <= 2:
-        return 1
+        if term == 1:
+            return 1
+        return 2
 
     # else if the term is not present in the memo and also not the first or second term, evaluate the value and store
     # that as the value of the term as key to the memo
@@ -32,4 +34,4 @@ def fibonacci_sequence(term, memo=None):
     return memo[term]
 
 
-print(fibonacci_sequence(78))
+print(fibonacci_sequence(32))
