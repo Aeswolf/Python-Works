@@ -1,0 +1,74 @@
+Python supports only two types of files.
+A file may be a binary file or a text file.
+Binary files are only read by applications that understand or are capable of reading binary content
+
+A file handling system follow only four basic steps:
+1. Creation of the file -> This can be done by a user or the python program itself.
+
+2. Opening the file to be worked on -> Files are opened in python using the builtin open function with a context manager.
+This function has two main arguments or parameters. The first parameter holds the name of the file to be opened. The second parameter holds
+the mode to which the file should be opened based on the kind of work to be done on the file. There four basic modes to
+which every file in python can be opened with. These modes are :
+
+a. Read mode --> In this mode, the content of the file can only be read and not written to. To achieve this mode, the
+mode parameter of the open function is set to the value 'r'.
+
+b. Write mode --> In this mode, the content of the file can be changed by allowing the user or python program accessing
+the file to write or add new content to the file. Whenever this mode is used, the file is assumed to have no existing
+content. If content already exist, then that content becomes deleted.To achieve this, the mode parameter of the open
+function is set to 'w'.
+
+c. Append mode --> In this mode, additional content can be added to already existing content of the file. The additional
+content is always added to last line of the existing content. To achieve this, the mode parameter of the open function
+is set to 'a'.
+
+d. Create mode --> In this mode, the file whose named is specified is created if and only if that file does not already
+exist. If the file already exist, the interpreter will throw or raise an exception or error. To achieve this mode, the
+mode parameter of the open function is set to 'x'.
+
+e. Read and Write mode --> In this mode, the content of the file can read and at the same the file can be written to. To
+achieve this mode, the mode parameter of the open function is set to 'r+'.
+
+NB: The read, write, read and write, and append modes will only work if the file being accessed already exist else an
+exception or error will be raised by the python interpreter.
+The default mode of every file opened in python is the read mode.
+The default type of every file in python is a text file. The type can be changed to a binary file by appending 'b' to
+the existing mode parameter. In the scenario where the file is a binary file and the user or program wishes to access
+the file in the text format, the mode parameter of the open function must be appended with 'l'.
+
+3. Working on the file -> Working on a file simply implies either writing to the file or reading from the file
+
+4. Closing the file -> Once the work on the file is done, ensure that the file is closed to prevent other users or
+python programs from making changing to it
+
+Reading a file in python
+To read a file in python, first-of-all the file must be opened in the read mode. Once that is done, the read() function
+must be employed on the variable housing the file. The read() can be used to read all the content of the file or only
+specific characters. To read all the content of the file, the read function must not have any parameter passed to it. To
+Python also provides the function readline() to read the content of the file line by line. When the readline() function
+is used without an argument, python reads only a single line of the file at a time. If an argument is specified(which
+should a number), python will read the first number of lines of the file as specified as an argument. All the lines of
+file can also read at the same time using the readlines() function. This function returns all the lines available in the
+file as a list separated as a result of new lines.
+An efficient way to read all the lines in a file is to use a for loop and the readline() function.
+
+Writing to A file
+To write new contents to an opened file,ensure that the file is in the write mode and use the write() function on the
+variable holding the file. This function allows us to write a single line of the file at a given time. To write several
+lines to the file, the writelines() function is used.
+To add additional contents to already existing content of a file, the file should be in the append mode and use the
+write() or writelines() function.
+
+File Creation
+To create a file using python code, ensure that that file is opened with a name that does not exist already, and it is
+opened in the creation mode.
+
+Deletion of A file
+To delete any file that has been created, the os.remove(filename) function is used. In order for this function to work, the os
+module must be imported. The name of the file to be imported must be passed as an argument to the remove function for
+that file to be deleted.
+
+NB: In best practice, whenever dealing with file, ensure that the os module is imported. Before deleting any file,
+ensure that file exists before using the remove function. To check if a file exists, the function path.exists(filename) is
+used on the os module.
+
